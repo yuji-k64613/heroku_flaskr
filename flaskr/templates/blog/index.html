@@ -16,7 +16,7 @@
           <div class="about">by {{ post[0].name }} on {{ post[1].created }}</div>
         </div>
         {% if g.user.id == post[1].author_id %}
-          <a class="action" href="{{ url_for('blog.update', id=post[0].id) }}">Edit</a>
+          <a class="action" href="{{ url_for('blog.update', id=post[1].id) }}">Edit</a>
         {% endif %}
       </header>
       <p class="body">{{ post[1].body }}</p>
