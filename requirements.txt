@@ -4,7 +4,6 @@ coverage==5.1
 Flask==1.1.2
 Flask-SQLAlchemy==2.4.3
 # Editable install with no version control (flaskr==1.0.0)
--e /Users/konishiyuji/workspaces/Flask/turorial
 importlib-metadata==1.6.0
 itsdangerous==1.1.0
 Jinja2==2.11.2
