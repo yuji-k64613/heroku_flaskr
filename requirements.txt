@@ -4,6 +4,8 @@ coverage==5.1
 Flask==1.1.2
 Flask-SQLAlchemy==2.4.3
 # Editable install with no version control (flaskr==1.0.0)
+gevent==20.5.2
+greenlet==0.4.15
 importlib-metadata==1.6.0
 itsdangerous==1.1.0
 Jinja2==2.11.2
@@ -21,3 +23,5 @@ waitress==1.4.3
 wcwidth==0.1.9
 Werkzeug==1.0.1
 zipp==3.1.0
+zope.event==4.4
+zope.interface==5.1.0

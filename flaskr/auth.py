@@ -4,12 +4,15 @@ from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
 from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.local import LocalProxy
+from flask import current_app
 
 #from flaskr.db import get_db
 from flaskr.database import db_session
 from flaskr.models import User
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
+logger = LocalProxy(lambda: current_app.logger)
 
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
@@ -63,6 +66,8 @@ def login():
             error = 'Incorrect password.'
 
         if error is None:
+            logger.debug("login")
+
             session.clear()
             #session['user_id'] = user['id']
             session['user_id'] = user.id
